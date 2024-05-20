@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="341.0" prefWidth="671.0" style="-fx-background-color: LightSteelBlue; -fx-border-color: black;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ModifierL_controller">
+   <children>
+      <VBox layoutX="40.0" layoutY="116.0" prefHeight="144.0" prefWidth="96.0" spacing="15.0">
+         <children>
+            <Label text="ISBN" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+            </Label>
+            <Label text="Titre" textFill="#fffdfd">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+            </Label>
+            <Label text="Auteur" textFill="#fffdfd">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <VBox layoutX="141.0" layoutY="115.0" prefHeight="131.0" prefWidth="182.0" spacing="10.0">
+         <children>
+            <TextField fx:id="isbnField" style="-fx-border-color: black;" />
+            <HBox prefHeight="20.0" prefWidth="182.0">
+               <children>
+                  <TextField fx:id="titreField" prefHeight="26.0" prefWidth="194.0" style="-fx-border-color: black;" />
+               </children>
+            </HBox>
+            <TextField fx:id="auteurField" style="-fx-border-color: black;" />
+         </children>
+      </VBox>
+      <Text fill="WHITE" layoutX="223.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Modifier Livre" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold Italic" size="34.0" />
+         </font>
+      </Text>
+      <VBox layoutX="453.0" layoutY="115.0" prefHeight="131.0" prefWidth="182.0" spacing="10.0">
+         <children>
+            <HBox prefHeight="20.0" prefWidth="182.0">
+               <children>
+                  <RadioButton fx:id="dispoOui" mnemonicParsing="false" text="oui" />
+                  <RadioButton fx:id="dispoNon" mnemonicParsing="false" text="non" />
+               </children>
+            </HBox>
+            <TextField fx:id="prixField" style="-fx-border-color: black;" />
+            <TextField fx:id="genreField" style="-fx-border-color: black;" />
+         </children>
+      </VBox>
+      <VBox layoutX="347.0" layoutY="115.0" prefHeight="131.0" prefWidth="96.0" spacing="15.0">
+         <children>
+            <Label text="Disponibilité" textFill="#fffdfd">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+            </Label>
+            <Label text="Prix par jour" textFill="#fffdfd">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+            </Label>
+            <Label text="Genre" textFill="#fffdfd">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <HBox layoutX="229.0" layoutY="241.0" prefHeight="100.0" prefWidth="240.0">
+         <children>
+            <Button fx:id="btn_modifier" mnemonicParsing="false" onAction="#modifierLivre" prefHeight="30.0" prefWidth="86.0" style="-fx-background-color: lightseagreen; -fx-border-color: black;" text="Modifier">
+               <HBox.margin>
+                  <Insets bottom="20.0" right="20.0" top="20.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="btn_annuler" mnemonicParsing="false" onAction="#Annuler" prefHeight="30.0" prefWidth="67.0" style="-fx-background-color: brown; -fx-border-color: black;" text="Annuler">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+               <HBox.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

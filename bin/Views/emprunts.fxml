@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: lightsteelblue; -fx-border-color: black;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.EmpruntController">
+    <top>
+        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Emprunts" wrappingWidth="165.57500839233398" BorderPane.alignment="CENTER">
+            <BorderPane.margin>
+                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+            </BorderPane.margin>
+            <font>
+                <Font name="System Bold Italic" size="33.0" />
+            </font>
+        </Text>
+    </top>
+    <center>
+        <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+            <children>
+                <HBox prefHeight="27.0" prefWidth="600.0" />
+                <VBox prefHeight="356.0" prefWidth="600.0">
+                    <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="34.0" prefWidth="600.0" spacing="10.0">
+                            <children>
+                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="ISBN" />
+                                <ComboBox fx:id="isbnComboBox" prefWidth="150.0" style="-fx-border-color: black;" />
+                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Cin" />
+                                <ComboBox fx:id="cinComboBox" prefWidth="150.0" style="-fx-border-color: black;" />
+                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Date retour" />
+                                <DatePicker fx:id="dateRetourPicker" style="-fx-border-color: black;" />
+                            </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="33.0" prefWidth="600.0" spacing="10.0">
+                            <children>
+                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Total" />
+                                <TextField fx:id="totalField" style="-fx-border-color: black;" />
+                                <Button fx:id="calculerButton" mnemonicParsing="false" onAction="#calculerButtonClicked" style="-fx-border-color: black; -fx-background-color: lemonchiffon;" text="Calculer" />
+                            </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="29.0" prefWidth="600.0" spacing="10.0">
+                            <children>
+                                <Button fx:id="ajouterButton" mnemonicParsing="false" onAction="#ajouterButtonClicked" style="-fx-border-color: black; -fx-background-color: lemonchiffon;" text="Ajouter">
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="500.0" top="5.0" />
+                           </HBox.margin></Button>
+                            </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="169.0" prefWidth="600.0">
+                            <children>
+                                <TableView fx:id="empruntTableView" prefHeight="170.0" prefWidth="605.0" style="-fx-border-color: black; -fx-background-color: lightseablue;">
+                                    <columns>
+                                        <TableColumn fx:id="idColumn" prefWidth="75.0" text="Id" />
+                                        <TableColumn fx:id="isbnColumn" prefWidth="75.0" text="ISBN" />
+                                        <TableColumn fx:id="cinColumn" prefWidth="75.0" text="Cin" />
+                                        <TableColumn fx:id="dateEmpruntColumn" prefWidth="127.19999694824219" text="Date emprunt" />
+                                        <TableColumn fx:id="dateRetourColumn" prefWidth="112.79998779296875" text="Date retour" />
+                                        <TableColumn fx:id="totalColumn" prefWidth="135.20001220703125" text="Total" />
+                                    </columns>
+                                </TableView>
+                            </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="56.0" prefWidth="600.0" spacing="10.0">
+                            <children>
+                                <Button fx:id="supprimerButton" mnemonicParsing="false" onAction="#handleSupprimer" style="-fx-border-color: black; -fx-background-color: lightseagreen;" text="Supprimer">
+                           <HBox.margin>
+                              <Insets left="250.0" />
+                           </HBox.margin></Button>
+                                <Button fx:id="btn_retour" mnemonicParsing="false" onAction="#retour" style="-fx-border-color: black; -fx-background-color: brown;" text="Retour">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin></Button>
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+            </children>
+        </VBox>
+    </center>
+</BorderPane>
