@@ -1,0 +1,8 @@
+Facture d'emprunt
+
+ID de l'emprunt: 32
+ISBN du livre: 7777777777
+CIN du client: 55555555
+Date d'emprunt: 21/05/2024
+Date de retour: 23/05/2024
+Montant total: 690.0

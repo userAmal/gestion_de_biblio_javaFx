@@ -67,7 +67,7 @@ public class pageAcc_controller {
     }
 	@FXML
 	protected void quiter(ActionEvent event) {
-		Window owner =btn_Quiter .getScene().getWindow();
+		Window owner =btn_Quiter.getScene().getWindow();
 		Platform.exit();
 		
 	}
